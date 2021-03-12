@@ -36,6 +36,24 @@ public class Lab {
         int result = containsVowel ? sentenceLower.indexOf("a"): sentenceLower.indexOf("z");
         System.out.println(result);
 
+        String monthName = "apr";
+        switch (monthName.toLowerCase()) {
+            case "dec":
+            case "jan":
+            case "feb":
+                System.out.println("winter season");
+            break;
+            case "mar":
+            case "apr":
+            case "may":
+                System.out.println("spring season");
+                break;
+
+            default:
+                System.out.println("Invalid month name: " + monthName);
+        }
+
+
 
     }
 }
