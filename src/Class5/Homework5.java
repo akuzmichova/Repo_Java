@@ -7,14 +7,15 @@ public class Homework5 {
     public static void main(String[] args) {
 
         String fullName = "  Aksana V Kuzmichova  ";
-        String fullNameNoSpace = fullName.trim();
-        boolean isFirstNameStartsWith_K_k = fullNameNoSpace.startsWith("K") || fullNameNoSpace.startsWith("k");
+        String fullNameNoSpace = fullName.trim().toUpperCase();
+        boolean isFirstNameStartsWith_K_k = fullNameNoSpace.startsWith("K");
+        //boolean isFirstNameStartsWith_K_k = fullNameNoSpace.startsWith("K") || fullNameNoSpace.startsWith("k");
         System.out.println("Does first name starts with 'K': " + isFirstNameStartsWith_K_k);
         String[] afterSplitBySpace = fullNameNoSpace.split(" ");
         int lastIndex = afterSplitBySpace.length - 1;
         boolean lastLetter_A_a = afterSplitBySpace[lastIndex].endsWith("a") ||afterSplitBySpace[lastIndex].endsWith("A");
 
-        if (lastIndex > 1) {
+        if (lastIndex >= 1) {
             System.out.println("Does last name ends with 'a': " + lastLetter_A_a);
             System.out.println("First letter of last name is: " + afterSplitBySpace[lastIndex].charAt(0));
         }

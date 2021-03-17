@@ -9,36 +9,34 @@ public class Homework6 {
         double studentScore = 496;
         double maxScore = 700;
         double studentPercentage = studentScore * 100 / maxScore;
-           if (studentPercentage > 90 && studentPercentage <= 100) {
+        if (studentPercentage > 90 && studentPercentage <= 100) {
             System.out.println("Your percentage is: " + df.format(studentPercentage) + " and your Grade is: " + "A");
-        } else if (studentPercentage > 80 && studentPercentage <= 89.99){
+        } else if (studentPercentage > 80 && studentPercentage <= 89.99) {
             System.out.println("Your percentage is: " + df.format(studentPercentage) + " and your Grade is: " + "B");
-        } else if (studentPercentage > 70 && studentPercentage <= 79.99){
+        } else if (studentPercentage > 70 && studentPercentage <= 79.99) {
             System.out.println("Your percentage is: " + df.format(studentPercentage) + " and your Grade is: " + "C");
-        } else if (studentPercentage > 60 && studentPercentage <= 69.99){
+        } else if (studentPercentage > 60 && studentPercentage <= 69.99) {
             System.out.println("Your percentage is: " + df.format(studentPercentage) + " and your Grade is: " + "D");
-        } else if (studentPercentage > 50 && studentPercentage <= 59.99){
+        } else if (studentPercentage > 50 && studentPercentage <= 59.99) {
             System.out.println("Your percentage is: " + df.format(studentPercentage) + " and your Grade is: " + "E");
-        } else if (studentPercentage <= 50 && studentPercentage > 0){
+        } else if (studentPercentage <= 50 && studentPercentage > 0) {
             System.out.println("Your percentage is: " + df.format(studentPercentage) + " and your Grade is: " + "F");
-        }
-        else {
+        } else {
             System.out.println("Invalid value of student score");
         }
 
         int var = 225;
-        if (var%3 == 0 && var%5 == 0){
+        if (var % 3 == 0 && var % 5 == 0) {
             System.out.println("Number " + var + " is divisible by both 3 and 5");
-        } else if (var%3 == 0){
+        } else if (var % 3 == 0) {
             System.out.println("Number " + var + " is divisible by 3");
-        } else if (var%5 == 0){
+        } else if (var % 5 == 0) {
             System.out.println("Number " + var + " is divisible by 5");
-        }
-        else {
+        } else {
             System.out.println("Number " + var + " is not divisible by 3 or 5");
         }
 
-        char carGear = 'd';
+        char carGear = 'D';
         String driveType = "  SnoW ";
         switch (carGear) {
             case 'P':
@@ -56,11 +54,11 @@ public class Homework6 {
             case 'D':
             case 'd':
 
-                if (carGear == 'D' || carGear == 'd' && driveType.trim().equalsIgnoreCase("snow")) {
+                if (driveType.trim().equalsIgnoreCase("snow")) {
                     System.out.println("You are on Snow mode");
-                } else if (carGear == 'D' || carGear == 'd' && driveType.trim().equalsIgnoreCase("sport")){
+                } else if (driveType.trim().equalsIgnoreCase("sport")) {
                     System.out.println("You are on Sport mode");
-                } else if (carGear == 'D'|| carGear == 'd' && driveType.trim().equalsIgnoreCase ("eco")){
+                } else if (driveType.trim().equalsIgnoreCase("eco")) {
                     System.out.println("You are on Eco mode");
                 } else {
                     System.out.println("Invalid Drive Type");
@@ -71,12 +69,24 @@ public class Homework6 {
         }
 
 
-
-
     }
 }
 
 
+/** case 'D':
+ switch (driveType.toUpperCase()) {
+ case "SNOW":
+ System.out.println("You are in Snow mode");
+ break;
+ case "SPORT":
+ System.out.println("You are in Sport mode");
+ break;
+ case "ECO":
+ System.out.println("You are in Eco mode");
+ break;
+ default:
+ System.out.println("You are invalid drive type: " + driveType);
+ */
 
 
 
