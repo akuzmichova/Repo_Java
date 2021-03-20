@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Homework7 {
     public static void main(String[] args) {
-        String sentence_1 =  "  hApPY nEW yeAr is here  ";
+        String sentence_1 =  "  hApPY nEW yeAr is here     ";
         String trimSentence_1 = sentence_1.trim();
         String sentence_1ToLowerCase = trimSentence_1.toLowerCase();
         String[] sentence_1Split = sentence_1ToLowerCase.split(" ");
@@ -34,6 +34,8 @@ public class Homework7 {
             reverseSentence3 += splitSentence3[i];
           }
         System.out.println("Reverse sentence3: " + reverseSentence3);
+
+
 
 
     }
