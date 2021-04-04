@@ -1,5 +1,9 @@
 package Class4;
 
+import Class9.Homework9;
+
+import java.util.Arrays;
+
 public class Homework4 {
     public static void main(String[] args) {
         String sentence_3 = "hello dear, how are you?";
@@ -8,11 +12,11 @@ public class Homework4 {
         System.out.println("Length of this sentence: " + '"' + sentence_3 + '"' + " is greater than 10 characters: " + result);
 
         String sentence_4 = "We all ARe Good ProgRammeR";
-        String sentence_4Replace_R_r = sentence_4.replace('R','r');
-        String sentence_4Replace_r_f= sentence_4Replace_R_r.replace('r','f');
+        String sentence_4Replace_R_r = sentence_4.replace('R', 'r');
+        String sentence_4Replace_r_f = sentence_4Replace_R_r.replace('r', 'f');
         System.out.println('"' + sentence_4 + '"' + " sentence after replace 'r' to 'f': " + sentence_4Replace_r_f);
 
-        String fullName= "Aksana Kuzmichova";
+        String fullName = "Aksana Kuzmichova";
         int fullNameLength = fullName.length();
         System.out.println("My full name length with the space is: " + fullNameLength);
 
@@ -27,6 +31,19 @@ public class Homework4 {
         System.out.println("Does my full name contains 'a'?: " + isFullNameContains_a_A);
 
 
+/**
+ * find the words appearing max number of times
+ * if all words are unique, answer should be "All Unique"
+ * if one word is appearing max number of times, answer should be that word
+ * if two or more words are appearing max number of times, answer should be all those words
+ * input: String[]
+ * return type: String[]
+ * */
+
+
 
     }
 }
+
+
+

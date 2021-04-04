@@ -20,6 +20,16 @@ public class Homework2 {
         char myLastName = 'K';
         System.out.println("Initials of my name: " + myFirstName + myLastName);
 
+
+        String myString = "test#string";
+        int indexOfHash = myString.indexOf('#');
+        System.out.println(indexOfHash);
+        String newString1 = myString.substring(0,indexOfHash-1);
+        String newString2 = myString.substring(indexOfHash+2);
+        String newString = newString1+newString2;
+        System.out.println(newString);
+
+
     }
 }
 

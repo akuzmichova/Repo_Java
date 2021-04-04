@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Homework9 {
     public static void main(String[] args) {
-        System.out.println(titleCase("   How Are yOU my DeAr   "));
+        System.out.println(toTitleCase("   How Are yOU my DeAr   "));
         studentGrade(500, 700);
         int[] myArray = {1,2,3,4,5,6};
         System.out.println(Arrays.toString(reversedArray(myArray)));
@@ -12,7 +12,7 @@ public class Homework9 {
         System.out.println("Number of words in the sentence " + '"' + mySentence.trim() + '"' + " is: " + numOfWordsInSentence(mySentence));
     }
 
-    public static String titleCase(String anyCaseSentence) {
+    public static String toTitleCase(String anyCaseSentence) {
         String trimLowerSentence = anyCaseSentence.trim().toLowerCase();
         String[] sentenceSplit = trimLowerSentence.split(" ");
         String titleCaseSentence = "";
