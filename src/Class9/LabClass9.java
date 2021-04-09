@@ -32,6 +32,29 @@ public class LabClass9 {
         return longestNames;
     }
 
+
+    /**  for (int t = 0; t < arr1.length; t++) {
+     for (int p = 0; p < arr2.length; p++) {
+     if (arr1[t].equalsIgnoreCase(arr2[p])) {
+     System.out.print(arr1[t] + ' ');
+
+     }
+     }
+     }
+
+     System.out.println(count1);
+     int k = 0;
+     String[] arr3 = new String[count1];
+     for (int i=0; i<arr1.length; i++) {
+     for (int j=0; j<arr2.length; j++){
+     if (arr1[i].equalsIgnoreCase(arr2[j])){
+     System.out.print(arr1[i]+' ');
+     //arr3[k]=arr1[i];
+     k++;
+     }
+     }
+     }
+     */
     public String[] commonWordsInArrays(String[] arr1, String[] arr2) {
         int count1 = 0;
         String[] commonWords = new String[arr1.length];
@@ -43,7 +66,7 @@ public class LabClass9 {
                 }
             }
         }
-        String[] onlyCommonWords = new String[count1];
+    String [] onlyCommonWords = new String[count1];
         int b = 0;
         for (String sameWord : commonWords) {
             if (sameWord != null) {
@@ -53,6 +76,7 @@ public class LabClass9 {
         }
         return onlyCommonWords;
         }
+
 
     /*
     1. create int[]
