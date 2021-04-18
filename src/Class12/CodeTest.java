@@ -18,6 +18,31 @@ public class CodeTest {
         checkSpeed(178);
         checkSpeed(70);
 
+    int[] array = { 3, 5, 1, 4, 2, 7 };
+    int foundValue = missingSmallest(array);
+    System.out.println(foundValue);
+
+    int[] array2 = { -1, -3, 4, 2 };
+    int foundValue2 = missingSmallest(array2);
+    System.out.println(foundValue2);
+
+    int[] array3 = { 0, 5, -1, 1, 2, 5, 3, 7, 1, 2 };
+    int foundValue3 = missingSmallest(array3);
+    System.out.println(foundValue3);
+
+}
+
+
+    public static int missingSmallest(int[] arr) {
+        int check = 1;
+        for (int i = 0; i< arr.length; i++) {
+            if (arr[i] == check) {
+                check++;
+                i = -1;
+            }
+        }
+        return check;
+
     }
 
     public static int[] cleanArray(int[] array, int toRemove) {
