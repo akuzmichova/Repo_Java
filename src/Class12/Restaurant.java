@@ -18,7 +18,6 @@ public class Restaurant {
     private int maxGuestCapacity;
     private int currentGuestCount;
     private int totalGuestsSoFar;
-    private boolean availableSeats;
     private int numOfAvailableSeats;
 
 
@@ -29,9 +28,10 @@ public class Restaurant {
     }
 
     public boolean availableSeats(int numOfAvailableSeats) {
-
+        boolean availableSeats = false;
         if (numOfAvailableSeats <= maxGuestCapacity - currentGuestCount && numOfAvailableSeats > 0) {
             System.out.println(numOfAvailableSeats + " seats are available in the restaurant");
+            availableSeats = true;
         } else if (numOfAvailableSeats > maxGuestCapacity){
             System.out.println("Our restaurant is fully booked");
         } else {

@@ -71,9 +71,6 @@ public class LabClass7 {
 
 
 
-
-
-
         int j1 = 0;
         int[] indexOfFoundWord = new int[counter];
         for (int h = 0; h<myWords.length; h++) {

@@ -1,5 +1,8 @@
 package Class1;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Homework2 {
     public static void main(String[] args) {
         byte numDayHours = 24;
@@ -33,6 +36,9 @@ public class Homework2 {
         for (int k=0; k<counter.length; k++){
             System.out.println(myWords[k]+" " + counter[k]);
         }
+
+
+
 
     }
 }
