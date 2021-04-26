@@ -1,8 +1,6 @@
 package Class13;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class LabClass13 {
     public static void main(String[] args) {
@@ -57,6 +55,44 @@ public class LabClass13 {
             System.out.println("Grow is not present in the given list");
         }
 
+        String[] givenArray = {"happy", "peace", "joy", "grow", "joy", "laugh", "happy", "laugh", "joy"};
+        List<String> fromArray = Arrays.asList(givenArray);
+        Set<String> duplicates = new HashSet<>();
+        for (String value : fromArray) {
+            if (fromArray.indexOf(value) !=fromArray.lastIndexOf(value)){
+                duplicates.add(value);
+            }
+        }
+            System.out.println("Duplicates: " + duplicates);
 
+
+        String[] arr = {"green", "blue", "red", "yellow", "grey", "green", "red", "grey",
+                "green", "red", "yellow", "yellow", "grey", "blue", "yellow", "grey",
+                "green", "blue", "yellow", "grey", "green", "blue", "green", "green",
+                "green", "green"};
+
+        Map<String, Integer> colorCount = new HashMap<>();
+        colorCount.put("green", 10);
+        colorCount.put("red", 21);
+        colorCount.put("blue", 43);
+        colorCount.put("orange", 12);
+        colorCount.put("violet", 10);
+        colorCount.put("pink", 65);
+        colorCount.put("white", 7);
+        colorCount.put("black", 10);
+
+
+        printKeyWithCondition(colorCount);
     }
+
+    public static void printKeyWithCondition(Map<String, Integer> givenMap){
+    Set<String> allKeys =givenMap.keySet();
+    for (String key : allKeys) {
+        Integer val = givenMap.get(key);
+        if (val > 8 && val < 21) {
+            System.out.println(key);
+        }
+    }
+    }
+
 }

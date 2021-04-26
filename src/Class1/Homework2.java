@@ -1,7 +1,6 @@
 package Class1;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Homework2 {
     public static void main(String[] args) {
@@ -33,15 +32,16 @@ public class Homework2 {
                 }
             }
         }
-        for (int k=0; k<counter.length; k++){
-            System.out.println(myWords[k]+" " + counter[k]);
+        for (int k = 0; k < counter.length; k++) {
+            System.out.println(myWords[k] + " " + counter[k]);
         }
-
-
-
 
     }
 }
+
+
+
+
 
 /**
  * find the words appearing max number of times

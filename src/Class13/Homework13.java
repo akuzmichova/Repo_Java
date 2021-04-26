@@ -72,7 +72,6 @@ public class Homework13 {
                     resultWord = arr[i];
                 }
             }
-
         }
             return resultWord;
 
