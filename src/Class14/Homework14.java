@@ -15,7 +15,6 @@ public class Homework14 {
 
         System.out.println("Color with maximum count: " + hw14.countColors(arr));
 
-
         Map<Integer, String> intStringMap = new HashMap<>();
         intStringMap.put(101, "happy");
         intStringMap.put(102, "peace");
@@ -24,12 +23,16 @@ public class Homework14 {
         intStringMap.put(105, "PEaCe");
         intStringMap.put(106, "HAPPY");
 
+        hw14.toPrintKeyWithSameValue(intStringMap);
+
         Map<Integer, String> intStringMap1 = new HashMap<>();
         intStringMap1.put(111, "happy");
         intStringMap1.put(98, "peace");
         intStringMap1.put(10, "LAugh");
         intStringMap1.put(55, "learn");
         intStringMap1.put(101, "Grow");
+
+        hw14.toPrintKeyWithSameValue(intStringMap1);
     }
 
     public Map<String, Integer> duplicatesWithCount(List<String> words) {
@@ -71,6 +74,29 @@ public class Homework14 {
             }
         }
         return maxColor;
+    }
+
+    public void toPrintKeyWithSameValue( Map<Integer, String> intStringMap) {
+        Map<String, Set<Integer>> colorCount = new HashMap<>();
+        for (Integer number : intStringMap.keySet()) {
+            String color = intStringMap.get(number).toLowerCase();
+
+            if (colorCount.get(color) != null) {
+                colorCount.get(color).add(number);
+            } else {
+                Set<Integer> numbers = new HashSet<Integer>();
+                numbers.add(number);
+                colorCount.put(color, numbers);
+            }
+        }
+        for (String currentColor : colorCount.keySet()) {
+            Set<Integer> numbers = colorCount.get(currentColor);
+            if (numbers.size() > 1) {
+                System.out.println(currentColor + ":" + numbers);
+
+            }
+        }
+
     }
 
 }

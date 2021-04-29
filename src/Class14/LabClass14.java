@@ -2,6 +2,8 @@ package Class14;
 
 import com.sun.org.apache.xpath.internal.objects.XNumber;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class LabClass14 {
@@ -89,11 +91,6 @@ public class LabClass14 {
         System.out.println("Max Score : " + maxScore);
 
 
-
-        Collection<Integer> totalScores = totalScore.values();
-        for (Integer score : totalScores) {
-
-        }
 
 
         /**

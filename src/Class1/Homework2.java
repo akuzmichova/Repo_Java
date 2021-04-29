@@ -36,11 +36,9 @@ public class Homework2 {
             System.out.println(myWords[k] + " " + counter[k]);
         }
 
+
     }
 }
-
-
-
 
 
 /**
