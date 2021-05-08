@@ -1,5 +1,7 @@
 package Class1;
 
+import Class14.Homework14;
+
 import java.util.*;
 
 public class Homework2 {
@@ -39,6 +41,7 @@ public class Homework2 {
 
     }
 }
+
 
 
 /**

@@ -2,8 +2,7 @@ package Class15;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.*;
 
 public class LabClass15 {
     public static void main(String[] args) {
@@ -56,6 +55,43 @@ public class LabClass15 {
         String formattedCurrentTime = df.format(currentCalendar.getTime());
         System.out.println(formattedCurrentTime);
 
+        System.out.println(Arrays.toString(generateTimeline(5)));
+
+        //generateTimeline(5);
+
+
+        Scanner input = new Scanner(System.in); // to create object of Scanner
+
+       try {
+        System.out.println("\nEnter your first name: ");
+        String fName = input.next();
+
+        System.out.println("\nEnter your last name: ");
+        String lName = input.next();
+
+        System.out.println("Enter your age in years (whole number): ");
+        int age = input.nextInt();
+
+        System.out.println("\nEntered data:\nName: " + fName + " " + lName + ", age = " + age);
+        } catch (InputMismatchException e) {
+           System.out.println("Invalid date entered. Try again!");
+       }
+    }
+
+    public static String[] generateTimeline(int dataPoints){
+        Calendar cal = Calendar.getInstance();
+        Date now = new Date();
+        SimpleDateFormat df = new SimpleDateFormat("ha");
+        String[] timeline = new String[dataPoints];
+
+        for (int i=0; i<dataPoints; i++) {
+            if (i>0) {
+                cal.add(Calendar.HOUR, 2);
+            }
+            timeline[i] = df.format(cal.getTime());
+        }
+        //System.out.println(Arrays.toString(timeline));
+        return timeline;
     }
 
 }

@@ -30,7 +30,34 @@ public class CodeTest {
     int foundValue3 = missingSmallest(array3);
     System.out.println(foundValue3);
 
-}
+        /**
+         * X=7  Y=42  Arr={6, 42, 11, 7, 1, 42}; //Ans -> 4
+         * X=6  Y=13  Arr={13, 13, 1, 6}; //Ans -> 0
+         * X=100  Y=63  Arr={100, 63, 100, 6, 2}; //Ans -> 1
+         * X=10  Y=64  Arr={10, 32, 100, 64, 2, 55, 22}; //Ans -> 6
+         */
+
+        int[] ints = {6, 42, 11, 7, 1, 42};
+        int x = 7;
+        int y = 42;
+        int countX = 0;
+        int countY = 0;
+        int i = 0;
+        for (i=0; i<ints.length; i++){
+            if (ints[i] == x){
+                countX++;
+            }
+            if (ints[i] == y){
+                countY++;
+            }
+            if (countX>=2 || countY>=2){
+                break;
+            }
+        }
+        System.out.println("Harry and Sam: " + (i-1));
+    }
+
+
 
 
     public static int missingSmallest(int[] arr) {
@@ -82,6 +109,7 @@ public class CodeTest {
 
 
 }
+
 
 
 
